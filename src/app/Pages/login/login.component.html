@@ -1,0 +1,32 @@
+<div class="w-full flex justify-center p-3">
+    <div class="w-1/4 shadow-lg border border-gray-300 rounded-xl py-3">
+        <div class="text-center text-xl p-4 uppercase font-bold">Login</div>
+
+        <form [formGroup]="loginForm" class="flex flex-col justify-center pr-4 " (submit)="login()">
+            <div class="formInput mb-2 justify-center mx-2">
+                <input formControlName="username" type="text" placeholder="Enter Username"
+                    class="text-sm border border-gray-500 p-2 rounded  w-full">
+                <div *ngIf="loginForm.controls['username'].touched && loginForm.controls['username'].hasError('required')"class="text-red-600 text-xs mb-2 mx-2">*Username is Required</div>
+            </div>
+            <div class="formInput mb-2 justify-center mx-2">
+                <input formControlName="email" type="email" placeholder="Enter Email"
+                    class="text-sm border border-gray-500 p-2 rounded  w-full">
+                <div *ngIf="loginForm.controls['email'].touched && loginForm.controls['email'].hasError('required')" class="text-red-600 text-xs mb-2 mx-2">*Email is Required</div>
+
+                <div *ngIf="loginForm.controls['email'].touched && loginForm.controls['email'].hasError('email')" class="text-red-600 text-xs mb-2 mx-2">*Email is Invalid</div>
+
+            </div>
+            <div class="formInput mb-2 justify-center mx-2">
+
+                <input formControlName="password" type="password" placeholder="Enter Password"
+                    class="text-sm border border-gray-500 p-2 rounded  w-full">
+
+                <div *ngIf="loginForm.controls['password'].touched && loginForm.controls['password'].hasError('required')" class="text-red-600 text-xs mb-2 mx-2">*Password is Required</div>
+
+            </div>
+
+            <button [disabled]="loginForm.invalid"
+                class="btn bg-green-700 mx-2 text-white my-3 p-2 rounded disabled:bg-gray-300 disabled:cursor-not-allowed">Login</button>
+        </form>
+    </div>
+</div>

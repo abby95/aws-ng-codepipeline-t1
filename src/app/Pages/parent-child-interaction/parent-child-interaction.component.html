@@ -1,0 +1,21 @@
+This is Parent 
+<br>
+Demonstrating Content Projection and Parent Child Interaction 
+
+<app-child [parentData]="'Kaise Ho Babua'" (emitDataToPapa)="receiveDataFromBeta($event)">
+
+    <p slot1>Slot 1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus, aliquam?</p>
+
+    <p>Default Slot Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus, aliquam?</p>
+</app-child>
+
+<button class="btn-papa p-3 bg-gray-800 rounded-lg text-white text-xs font-bold" (click)="changeBg()">Change Color to Blue</button>
+<br>
+<div class="customDirective" appHighlightYellow>
+    appHighlightYellow is a custom directive that will change the background to yellow
+</div>
+
+<div class="bg-orange-200 p-3 rounded-lg m-3" *ngIf="messageFromBeta!==''">
+    <div class="text-lg font-bold text-orange-600">Message From Beta</div>
+    {{messageFromBeta}}
+</div>

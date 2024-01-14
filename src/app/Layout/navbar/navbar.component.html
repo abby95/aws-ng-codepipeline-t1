@@ -1,0 +1,15 @@
+<div class="sticky top-0 left-0 bg-sky-800 text-gray-100 w-full h-12 flex justify-between px-2 items-center ">
+
+    <div class="brnd text-2xl uppercase text-white font-bold">REVISION</div>
+    <div class="Links flex gap-4">
+        <div routerLinkActive="active" routerLink="login" class="link cursor-pointer hover:text-white hover:underline text-sm text-blue-100" *ngIf="hideNavlinks">Login</div>
+        <div routerLinkActive="active" routerLink="home" class="link cursor-pointer hover:text-white hover:underline text-sm text-blue-100"*ngIf="!hideNavlinks">Home</div>
+        <!-- <div routerLinkActive="active" routerLink="profile" class="link cursor-pointer hover:text-white hover:underline text-sm text-blue-100"*ngIf="!hideNavlinks">Profile</div> -->
+        <div routerLinkActive="active" routerLink="products" class="link cursor-pointer hover:text-white hover:underline text-sm text-blue-100"*ngIf="!hideNavlinks">Products</div>
+        <div routerLinkActive="active" routerLink="parent-child" class="link cursor-pointer hover:text-white hover:underline text-sm text-blue-100"*ngIf="!hideNavlinks">Interaction</div>
+        <div routerLinkActive="active" routerLink="admin" class="link cursor-pointer hover:text-white hover:underline text-sm text-blue-100"*ngIf="!hideNavlinks">Admin</div>
+
+        <div (click)="logout()" class="link cursor-pointer hover:text-white hover:underline text-sm text-blue-100"*ngIf="!hideNavlinks">Logout</div>
+
+    </div>
+</div>

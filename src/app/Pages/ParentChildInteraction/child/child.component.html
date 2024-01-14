@@ -1,0 +1,21 @@
+<div class="card p-3 bg-white rounded-lg border m-3">
+    <div class="text-lg">Default Slot</div>
+    <ng-content></ng-content>
+</div>
+
+<div class="card p-3 bg-white rounded-lg border m-3">
+
+    <div class="text-lg">Slot 1</div>
+    <ng-content select="[slot1]"></ng-content>
+</div>
+
+<div class="bg-green-200 p-3 my-2">
+    <div class="font-bold">Message From Papa</div>
+    <div class="bg-white rounded-xl m-2 border p-3 flex items-center justify-between">
+        {{parentData}}
+
+        <button (click)="sendDataToPitaji()" class="btn bg-green-800 text-white p-2 rounded-lg"> Send to Papa ===> Hum Theek Pitaji.. Aap Batao</button>
+    </div>
+
+    
+</div>

@@ -1,0 +1,7 @@
+<pre *ngIf="userDetails">
+    {{userDetails|json}}
+</pre>
+
+<div class="text-red-500 p-3 m-4" *ngIf="userDetails===null">
+    Could Not Find User with the ID : {{userId}}
+</div>
